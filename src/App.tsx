@@ -1,6 +1,6 @@
-import { Button, createTheme, Palette, PaletteMode } from "@mui/material";
+import { createTheme } from "@mui/material";
 import { Container } from "@mui/system";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import NavigationMenu from "./components/shared/NavigationMenu";
@@ -26,7 +26,7 @@ function App() {
 
   useEffect(() => {
     dispatch(setInitialProblems());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">

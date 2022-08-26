@@ -3,12 +3,10 @@ import {
   AccordionDetails,
   AccordionSummary,
   Grid,
-  MenuItem,
-  MenuList,
   Typography,
 } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import LinearProgress from "@mui/material/LinearProgress";
 import DataTable from "./DataTable";
 import { Problem } from "../../types/Problem";
@@ -21,7 +19,7 @@ function AccordionItem(props: { title: string; data: Problem[] }) {
 
   function getSolvedInSection(): string {
     let cnt = 0;
-    data.map((p) => {
+    const arr = data.map((p) => {
       if (totalSolved.filter((id) => id === p.id).length > 0) cnt++;
     });
 
@@ -31,7 +29,7 @@ function AccordionItem(props: { title: string; data: Problem[] }) {
 
   function showOnProgess(): number {
     let cnt = 0;
-    data.map((p) => {
+    const arr = data.map((p) => {
       if (totalSolved.filter((id) => id === p.id).length > 0) cnt++;
     });
 
