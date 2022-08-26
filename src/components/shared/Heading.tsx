@@ -1,5 +1,4 @@
 import { Typography, useTheme } from "@mui/material";
-import { purple } from "@mui/material/colors";
 import React from "react";
 
 function Heading(props: { title: string }) {

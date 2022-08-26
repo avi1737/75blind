@@ -11,8 +11,6 @@ import {
   TableRow,
   useTheme,
 } from "@mui/material";
-
-import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Problem } from "../../types/Problem";
@@ -23,7 +21,6 @@ function DataTable(props: { data: Problem[] }) {
   // const problems = useSelector((state: RootState) => state.questions.questions);
   const dispatch = useDispatch();
   const theme = useTheme();
-  const p = useSelector((state: RootState) => state.questions.questions);
   const status = useSelector((state: RootState) => state.questions.st);
 
   const { data } = props;
@@ -114,6 +111,7 @@ function DataTable(props: { data: Problem[] }) {
                     <a
                       href={getLink(item)}
                       target="_blank"
+                      rel="noreferrer"
                       style={{ color: "#fff", textDecoration: "none" }}
                     >
                       Go to Leetcode

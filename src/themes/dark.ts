@@ -1,5 +1,5 @@
 import { ThemeOptions } from "@mui/material";
-import { green, indigo, pink } from "@mui/material/colors";
+import { green, pink } from "@mui/material/colors";
 const darkTheme: ThemeOptions = {
   palette: {
     mode: "dark",

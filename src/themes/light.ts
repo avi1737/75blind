@@ -1,5 +1,5 @@
 import { ThemeOptions } from "@mui/material";
-import { green, indigo, pink, purple, red } from "@mui/material/colors";
+import { indigo, purple } from "@mui/material/colors";
 
 const lightTheme: ThemeOptions = {
   palette: {

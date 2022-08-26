@@ -9,7 +9,6 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import light from "./themes/light";
 import dark from "./themes/dark";
 import HomePage from "./pages/home/HomePage";
-import VideoPage from "./pages/video/VideoPage";
 import { useSelector, useDispatch } from "react-redux";
 import { setInitialProblems } from "./redux/problemSlice";
 import { RootState } from "./redux/store";
@@ -36,9 +35,6 @@ function App() {
         <Container sx={{ margin: "100px auto" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/Profile" element={<h1>Profile</h1>} />
-            <Route path="/Roadmap" element={<h1>RoadMap</h1>} />
-            <Route path="/questions/:id" element={<VideoPage />} />
           </Routes>
         </Container>
       </ThemeProvider>

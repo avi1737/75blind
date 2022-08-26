@@ -1,10 +1,5 @@
-import {
-  FormControlLabel,
-  FormGroup,
-  Switch,
-  SwitchProps,
-} from "@mui/material";
-import { styled, Theme } from "@mui/system";
+import { FormControlLabel, FormGroup, Switch } from "@mui/material";
+import { styled } from "@mui/system";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { switchMode } from "../redux/layoutSlice";

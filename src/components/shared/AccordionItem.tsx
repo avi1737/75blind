@@ -20,9 +20,14 @@ function AccordionItem(props: { title: string; data: Problem[] }) {
   function getSolvedInSection(): string {
     let cnt = 0;
     const arr = data.map((p) => {
-      if (totalSolved.filter((id) => id === p.id).length > 0) cnt++;
+      if (totalSolved.filter((id) => id === p.id).length > 0) {
+        cnt++;
+        return p;
+      } else {
+        return p;
+      }
     });
-
+    console.log(arr);
     let result = `(${cnt}/${data.length})`;
     return result;
   }
@@ -30,9 +35,14 @@ function AccordionItem(props: { title: string; data: Problem[] }) {
   function showOnProgess(): number {
     let cnt = 0;
     const arr = data.map((p) => {
-      if (totalSolved.filter((id) => id === p.id).length > 0) cnt++;
+      if (totalSolved.filter((id) => id === p.id).length > 0) {
+        cnt++;
+        return p;
+      } else {
+        return p;
+      }
     });
-
+    console.log(arr);
     let result = (cnt / data.length) * 100;
     return result;
   }
